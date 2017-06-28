@@ -69,7 +69,21 @@
     ssize_t sendLen = send(clientSocket, msg.UTF8String, strlen(msg.UTF8String), 0);
     NSLog(@"send %ld",sendLen);
     
-
+    // 4. 读取数据
+    /**
+     参数
+     客户端socket
+     接收内容缓冲区
+     buffer长度
+     接收方式        0表示阻塞 , 必须等待着服务器返回数据 (下面的代码不执行 除非收到msg)
+     返回值
+     
+     */
+    uint8_t buffer[1024];
+    ssize_t recvLen = recv(clientSocket, buffer, sizeof(buffer), 0);
+    NSLog(@"recieve %ld",recvLen);      // 终端中输入str 回车
+    
+    //
 }
 
 
