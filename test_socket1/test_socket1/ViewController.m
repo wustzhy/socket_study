@@ -23,20 +23,22 @@
     
     // 1. 创建socket
     /**
+     参数
          domain:    协议域 AF_INET -> IPV4
          type:      socket类型 ,SOCK_STREAM -> TCP , SOCK_DGRAM -> UDP
          protocol:
-     
+     返回
          return:    socket
      */
     int clientSocket = socket(AF_INET, SOCK_STREAM, 0); // 6
     
     // 2. 连接
     /** 
+     参数
         client socket:
         (地址)指针:           指向 结构体sockaddr (目标(server)的 port ip)
         结构体数据长度:
-     
+     返回
         return:             0 成功
      */
     struct sockaddr_in serverAddr;
@@ -51,6 +53,23 @@
     }
     // 终端 nc -lk 12345
     // nc - Netcat
+    
+    // 3. 发送数据
+    /** 
+     参数
+        client socket:
+        发送内容指针
+        发送内容长度
+        发送方式标志, 一般为0
+     返回值
+        如果成功, 则返回字节数
+     */
+    NSString * msg = @"hello socket";
+    //const char * msg1 = "hello socket 1";
+    ssize_t sendLen = send(clientSocket, msg.UTF8String, strlen(msg.UTF8String), 0);
+    NSLog(@"send %ld",sendLen);
+    
+
 }
 
 
