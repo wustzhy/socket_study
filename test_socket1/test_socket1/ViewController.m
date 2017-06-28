@@ -81,9 +81,16 @@
      */
     uint8_t buffer[1024];
     ssize_t recvLen = recv(clientSocket, buffer, sizeof(buffer), 0);
-    NSLog(@"recieve %ld",recvLen);      // 终端中输入str 回车
+    NSLog(@"recieve %ld bytes",recvLen);      // 终端中输入str 回车
+    NSData * data = [NSData dataWithBytes:buffer length:recvLen];
+    NSString * str_recv = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"recieve msg: %@",str_recv);
     
-    //
+    // 长连接/短连接 , 取决于收发频次, 太高频次则长连接
+    
+    // 5.关闭连接   // 群聊,多对多其实就是单对单,原理:a发给b,同时发送给cde
+    close(clientSocket);    // 收到数据关->短连接   不关->长连接
+    
 }
 
 
