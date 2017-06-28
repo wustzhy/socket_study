@@ -1,2 +1,3 @@
 # socket_study_1
-if you wanna start socket study, this project can be a good choose for your journey of socket
+If you wanna start your socket study, this project can be a good choise.
+Let's go ahead ~'
