@@ -12,7 +12,7 @@ Let's go ahead ~'
 读取数据  `ssize_t recv(int, void *, size_t, int) __DARWIN_ALIAS_C(recv);`
 
 ****
-### 详见👇(去我的简书看看吧^_^)
-[socket入门回顾](http://www.jianshu.com/p/97dbb6c11361)
+### 详见👇
+(来我的简书遛弯吧^_^)[socket入门回顾](http://www.jianshu.com/p/97dbb6c11361)
 ****
 
