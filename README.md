@@ -13,6 +13,6 @@ Let's go ahead ~'
 
 ****
 ### 详见👇
-(来我的简书遛弯吧^_^)[socket入门回顾](http://www.jianshu.com/p/97dbb6c11361)
+来我的简书遛弯吧^_^ [socket入门回顾](http://www.jianshu.com/p/97dbb6c11361)
 ****
 
