@@ -3,13 +3,13 @@ If you wanna start your socket study, this project can be a good choise.
 Let's go ahead ~'
 ****
 ### 基本用法
-创建    `int socket(int domain, int type, int protocol);`
+创建      `int socket(int domain, int type, int protocol);`
 
-连接    `int connect(int, const struct sockaddr *, socklen_t) __DARWIN_ALIAS_C(connect);`
+连接      `int connect(int, const struct sockaddr *, socklen_t) __DARWIN_ALIAS_C(connect);`
 
-发送数据  `ssize_t send(int, const void *, size_t, int) __DARWIN_ALIAS_C(send);`
+发送数据   `ssize_t send(int, const void *, size_t, int) __DARWIN_ALIAS_C(send);`
 
-读取数据  `ssize_t recv(int, void *, size_t, int) __DARWIN_ALIAS_C(recv);`
+读取数据   `ssize_t recv(int, void *, size_t, int) __DARWIN_ALIAS_C(recv);`
 
 ****
 ### 详见👇
